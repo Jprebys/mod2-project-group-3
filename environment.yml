@@ -1,4 +1,4 @@
-name: learn-env
+name: linreg-env
 channels:
   - conda-forge
   - defaults
@@ -184,5 +184,4 @@ dependencies:
   - xz=5.2.4=h2fa13f4_4
   - zeromq=4.3.1=h33f27b4_3
   - zlib=1.2.11=h62dcd97_3
-prefix: C:\Users\jaker\anaconda3\envs\learn-env
 
