@@ -4,11 +4,12 @@
 
 ### __mod2-project-group-3__
 __-data__
-    -shapefiles
+
+-shapefiles
     /#Files needed to create a map of zipcodes
     https://github.com/Jprebys/mod2-project-group-3/tree/master/data/shapefiles
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.cpg
-        -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.dbf
+        - Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.dbf
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.prj
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.shp
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.shx
@@ -21,6 +22,7 @@ __-data__
     /#Zipcodes of King County, WA
     
 __-notebooks__
+
 /#contains .pynb notebooks where code is written
 https://github.com/Jprebys/mod2-project-group-3/tree/master/notebooks
     -exploratory
@@ -44,12 +46,14 @@ https://github.com/Jprebys/mod2-project-group-3/tree/master/notebooks
     https://github.com/Jprebys/mod2-project-group-3/blob/master/notebooks/final.ipynb
 
 __-refrences__
+
 /#Contains data dictionary
 https://github.com/Jprebys/mod2-project-group-3/tree/master/references
     -data_dictionary.pdf
     /#Document that provides clarification on what columns mean
 
 __-reports__
+
 /#Contains presented information
 https://github.com/Jprebys/mod2-project-group-3/tree/master/reports
     -figures
@@ -65,6 +69,7 @@ https://github.com/Jprebys/mod2-project-group-3/tree/master/reports
     /#Presentation slides of porject presentation
     
 __-src__
+
 /#Contains visualization's of charts and maps
 https://github.com/Jprebys/mod2-project-group-3/tree/master/src
     -duplex.png
@@ -76,14 +81,12 @@ https://github.com/Jprebys/mod2-project-group-3/tree/master/src
     /#A regression plot illustrating relationship between sale price and square footage
     
 __-.gitignore__
+
 /#The file that instructs git to ignore files
 https://github.com/Jprebys/mod2-project-group-3/blob/master/.gitignore
 
 __-README.md__ *you are here*
 
-__-project outline.ipynb__
-/#The notebook that contains the instructions for the project
-https://github.com/Jprebys/mod2-project-group-3/blob/master/project%20outline.ipynb
 
 
 ## Project Context
@@ -111,7 +114,7 @@ The python programming lanuage was used along with the libraries of pandas, nump
 
 Our first model investigates the relationship between home squarefootage and sale price. 
 
-(chart here)
+![](src/regression.png)
 
 We found an R^2 value of .387, which is a little below the set threshold of .4. What this tells us is that squarefootage does have some affect on sale price, but the condition number is large (5.72EE3). This tells us that there are likely other factors at play other than the living space of the house
 
@@ -119,13 +122,13 @@ This led to a hypothesis test asking if duplexes have a lower price per square f
 
 Our seccond model investigates the relationship between the number of bathrooms and sale price/
 
-(chart here)
+![](src/duplex.png)
 
 Similar to our squarefootge model, we found an R^2 value of .388, which is a little below the set threshold of .4. What this tells us is that squarefootage does have some affect on sale price, but the condition number is large (6.88EE3). This tells us that there are likely other factors at play other than the number of bathrooms. 
 
 Our thrid model illustrates the relationship between zip code (location) and sale price.
 
-(chart here)
+![](src/map.png)
 
 We found a R^2 value of .468, which is above our set threshold of .4. This tells us that we cna say with confidence that zipcode / area of the property clearly affects the sale price of homes. The highest sale price areas are Bellevue, Mercer Island, and Medina. The condition number is still quite large (1.51EE4), which tells us that there are still likely other factors influencing sale price. 
 
@@ -133,7 +136,7 @@ The next explored claim was whether having a porch increases sale price versus n
 
 The final explored claim was if having waterfront access increases the sale price of homes. 
 
-(chart)
+![](src/waterfront.png)
 
 A one-tailed t-test resulted in a low p value of 4.50EE-25. This is lower than the set alpha value of .05, so we rejected the null hypothesis. 
 
