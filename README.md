@@ -2,32 +2,27 @@
 
 ## Table of Contents
 
-### __mod2-project-group-3__
-__-data__
-
--shapefiles
+### Repository Structure
+```
+-data
+    -shapefiles
     /#Files needed to create a map of zipcodes
-    https://github.com/Jprebys/mod2-project-group-3/tree/master/data/shapefiles
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.cpg
-        - Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.dbf
+        -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.dbf
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.prj
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.shp
         -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.shx
-        -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.xml   
+        -Zipcodes_for_King_County_and_Surrounding_Area___zipcode_area.xml
     -Sales.csv
     /#A .csv containing data on sold homes in King county, WA
     -master.csv
     /#Merged .csv of Parcel.csv, Real_Property_Sales.csv, and Residential_Building.csv
     -zipcodes.csv
     /#Zipcodes of King County, WA
-    
-__-notebooks__
-
-/#contains .pynb notebooks where code is written
-https://github.com/Jprebys/mod2-project-group-3/tree/master/notebooks
+-notebooks
+/#contains .ipynb notebooks where code is written
     -exploratory
-    /#Contains exploratory notebooks 
-    https://github.com/Jprebys/mod2-project-group-3/tree/master/notebooks/exploratory
+    /#Contains exploratory notebooks
         -Adam_Exploratory.ipynb
         /#Contains Adam's exploratory notebook
         -jp-1-exploratory.ipynb
@@ -43,49 +38,36 @@ https://github.com/Jprebys/mod2-project-group-3/tree/master/notebooks
         /#Dann's exploratory notebooks
     -final.ipynb
     /#Contains final notebook
-    https://github.com/Jprebys/mod2-project-group-3/blob/master/notebooks/final.ipynb
-
-__-refrences__
-
+-references
 /#Contains data dictionary
-https://github.com/Jprebys/mod2-project-group-3/tree/master/references
     -data_dictionary.pdf
     /#Document that provides clarification on what columns mean
-
-__-reports__
-
+-reports
 /#Contains presented information
-https://github.com/Jprebys/mod2-project-group-3/tree/master/reports
     -figures
-    /#contains .pds's of visualizations
-    https://github.com/Jprebys/mod2-project-group-3/tree/master/reports/figures
+    /#contains .pdf's of visualizations
         -Price by Outdoor Space.pdf
         /#Visualization illustrating types of porches and associated sale price
         -Price by Waterfront Access.pdf
-        /#Vizualization illustrating average value of homes on waterfront vs not
+        /#Visualization illustrating average value of homes on waterfront vs not
         -Price by Zip Code.pdf
         /#Map of zip codes and average sale price in each zip code
     -presentation.pdf
-    /#Presentation slides of porject presentation
-    
-__-src__
-
+    /#Presentation slides of project presentation
+-src
 /#Contains visualization's of charts and maps
-https://github.com/Jprebys/mod2-project-group-3/tree/master/src
     -duplex.png
-    /#A vizual illustrating the difference in $/square foot in houses vs duplexes
+    /#A visual illustrating the difference in $/square foot in houses vs duplexes
     -map.png
     -map_blue.png
     /#Maps illustrating cost of homes by zipcode in king county
     -regression.png
     /#A regression plot illustrating relationship between sale price and square footage
-    
-__-.gitignore__
-
+-.gitignore
 /#The file that instructs git to ignore files
-https://github.com/Jprebys/mod2-project-group-3/blob/master/.gitignore
-
-__-README.md__ *you are here*
+-README.md
+/#You are here
+```
 
 
 
