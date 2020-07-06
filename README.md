@@ -1,4 +1,4 @@
-# mod2-project-group-3 README
+# Modeling 2019 Home Sale Prices in King County, WA
 
 ## Table of Contents
 
@@ -76,11 +76,9 @@
 /#You are here
 ```
 
-
-
 ## Project Context
 
-Our task was to find relationships between traits of homes and their sale price in King County, Washington to advise realestate investors and potential home buyers on what features may increase the value of their properties. For this analysis we focused on single family homes within King County that had a sale price greater than $0 and sold in the year 2019. 
+Our task was to find relationships between traits of homes and their sale price in King County, Washington to advise real estate investors and potential home buyers on what features may increase the value of their properties. For this analysis we focused on single family homes within King County that had a sale price greater than $0 and sold in the year 2019.
 
 ## Objectives + Success Criteria
 
@@ -92,34 +90,33 @@ Any regression models must have a R^2 value > .4 to be accepted.
 
 ## Data
 
-The data sets used are all from the King County Department of Assessments (https://info.kingcounty.gov/assessor/DataDownload/default.aspx). Specifically Parcel (.ZIP), Real Property Sales (.ZIP), and Residential Building (.ZIP). This data contained infromation on all documented property sales within King County in 2019. This had been narrowed down to only single family homes that had sold for more than $0. 
+The data sets used are all from the King County Department of Assessments (https://info.kingcounty.gov/assessor/DataDownload/default.aspx). Specifically Parcel (.ZIP), Real Property Sales (.ZIP), and Residential Building (.ZIP). This data contained information on all documented property sales within King County in 2019. This had been narrowed down to only single family homes that had sold for more than $0.
 
 ## Methodology
 
-The python programming lanuage was used along with the libraries of pandas, numpy, matplotlib, seaborn, geopandas, scipy, and ols were used in this analysis. Pandas was used to create dataframes from the .csv files and isolate the variables and parameters we wanted to use for analysis. Matplotlib, seaborn, and geopandas were used to create the charts/ visualizations needed for insight and the presentation of our findings. Numpy, scipy, and ols were used for statistical tests and the creation of our regression models. 
-
+The Python programming language was used along with the libraries of pandas, numpy, matplotlib, seaborn, geopandas, scipy, and ols were used in this analysis. Pandas was used to create dataframes from the .csv files and isolate the variables and parameters we wanted to use for analysis. Matplotlib, seaborn, and geopandas were used to create the charts/ visualizations needed for insight and the presentation of our findings. Numpy, scipy, and ols were used for statistical tests and the creation of our regression models.
 
 ## Results
 
-Our first model investigates the relationship between home squarefootage and sale price. 
+Our first model investigates the relationship between home square footage and sale price.
 
-![](src/regression.png)
+![scatter plot of square footage vs. sale price, with best fit line](src/regression.png)
 
-We found an R^2 value of .387, which is a little below the set threshold of .4. What this tells us is that squarefootage does have some affect on sale price, but the condition number is large (5.72EE3). This tells us that there are likely other factors at play other than the living space of the house
+We found an R^2 value of .387, which is a little below the set threshold of .4. What this tells us is that square footage does have some effect on sale price, but the condition number is large (5.72EE3). This tells us that there are likely other factors at play other than the living space of the house
 
 This led to a hypothesis test asking if duplexes have a lower price per square foot than single family homes. A one-tailed t-test netted a p value of .27, which is greater than the alpha threshold set of .05, leading to the null hypothesis not being rejected. 
 
-Our seccond model investigates the relationship between the number of bathrooms and sale price/
+![distributions of price per square foot for duplexes vs. single-family homes](src/duplex.png)
 
-![](src/duplex.png)
+Our second model investigates the relationship between the number of bathrooms and sale price.
 
-Similar to our squarefootge model, we found an R^2 value of .388, which is a little below the set threshold of .4. What this tells us is that squarefootage does have some affect on sale price, but the condition number is large (6.88EE3). This tells us that there are likely other factors at play other than the number of bathrooms. 
+Similar to our square footage model, we found an R^2 value of .388, which is a little below the set threshold of .4. What this tells us is that number of bathrooms does have some effect on sale price, but the condition number is large (6.88EE3). This tells us that there are likely other factors at play other than the number of bathrooms.
 
-Our thrid model illustrates the relationship between zip code (location) and sale price.
+Our third model illustrates the relationship between zip code (location) and sale price.
 
-![](src/map.png)
+![choropleth map of average home price by zip code in King County](src/map.png)
 
-We found a R^2 value of .468, which is above our set threshold of .4. This tells us that we cna say with confidence that zipcode / area of the property clearly affects the sale price of homes. The highest sale price areas are Bellevue, Mercer Island, and Medina. The condition number is still quite large (1.51EE4), which tells us that there are still likely other factors influencing sale price. 
+We found a R^2 value of .468, which is above our set threshold of .4. This tells us that we can say with confidence that zipcode / area of the property clearly affects the sale price of homes. The highest sale price areas are Bellevue, Mercer Island, and Medina. The condition number is still quite large (1.51EE4), which tells us that there are still likely other factors influencing sale price.
 
 The next explored claim was whether having a porch increases sale price versus not having a porch. A one-tailed t-test resulted in a low p value of 1.61EE-178. This is much lower than the set alpha value of .05, so we rejected the null hypothesis. 
 
@@ -129,31 +126,16 @@ The final explored claim was if having waterfront access increases the sale pric
 
 A one-tailed t-test resulted in a low p value of 4.50EE-25. This is lower than the set alpha value of .05, so we rejected the null hypothesis. 
 
-
-
 ## Application + Next Steps
 
+What our results tell us is that when investing in the real estate of the King County area, one should look for these traits in homes:
 
-What our results tell us is that when investing in the realestate of the King County area, one should looks for these traits in homes:
+- On a waterfront
+- High square footage
+- Has a porch
+- Has multiple bathrooms
+- In the Bellevue, Mercer Island, or Medina areas
 
--On a waterfront
--High squarefootage
--Has a porch
--Has multiple bathrooms
--In the Bellevue, Mercer Island, or Medina areas
+The next steps we wish to take are to look deeper into location's effect on the sale price of homes. Specifically we want to look at the distance between homes and various locations such as downtown or corporate offices.
 
-
-The next steps we wish to take are to look deeper into location's affect on the sale price of homes. Specifically we want to look at the distance between homes and various locations such as downtown or corporate offices. 
-
-Another things that should be noted with the bathrooms is that this data set did not include if the bathrooms had showers or baths. Perhaps checking the number of showers in a home could be more insightful than the number of bathrooms. 
-
-
-
-
-
-
-
-
-
-
-
+Another thing that should be noted with the bathrooms is that this data set did not include if the bathrooms had showers or baths. Perhaps checking the number of showers in a home could be more insightful than the number of bathrooms.
