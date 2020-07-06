@@ -2,6 +2,13 @@
 
 ## Table of Contents
 
+1. [Data](/data/)
+2. [Notebooks](/notebooks/) ([final notebook](/notebooks/report/final.ipynb))
+3. [References](/references/)
+4. [Reports](/reports/) ([final presentation](/reports/presentation.pdf))
+5. [src](/src/)
+6. [`environment.yml`](/environment.yml) to [re-create this conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+
 ### Repository Structure
 ```
 -data
